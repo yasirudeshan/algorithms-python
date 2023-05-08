@@ -101,11 +101,4 @@ quickSort(A, 0, len(A) - 1)
 print(A)
 
 ----
-
-
-
-                
-                
-    
-    
-    
+   
