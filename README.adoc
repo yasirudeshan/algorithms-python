@@ -1,6 +1,7 @@
 # algorithms-python
 Learning Algorithms using python.
 
+#Bubble Sort Algorithm
 [source,python]
 ----
 def sort(A):
