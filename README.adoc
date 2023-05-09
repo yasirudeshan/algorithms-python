@@ -2,6 +2,21 @@
 Learning Algorithms using python.
 
 #Bubble Sort Algorithm
+
+Bubble Sort is a simple sorting algorithm that compares adjacent elements in a list or an array and swaps them if they are in the wrong order. This process is repeated until the entire list is sorted. Bubble Sort has a time complexity of O(n^2) and is not considered efficient for large datasets.
+
+Here's an example of how the Bubble Sort algorithm works:
+
+We start by comparing the first two elements of the list. If the first element is larger than the second element, we swap them.
+
+We then compare the second and third elements of the list. If the second element is larger than the third element, we swap them.
+
+We continue this process, comparing and swapping adjacent elements until we reach the end of the list.
+
+Once we have reached the end of the list, we repeat the entire process again, starting from the beginning of the list, until the entire list is sorted.
+
+Here's an example implementation of Bubble Sort in Python:
+
 [source,python]
 ----
 def sort(A):
