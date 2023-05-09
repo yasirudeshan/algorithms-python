@@ -1,7 +1,7 @@
-# algorithms-python
+# Algorithms-python
 Learning Algorithms using python.
 
-#Bubble Sort Algorithm
+**Bubble Sort Algorithm**
 
 Bubble Sort is a simple sorting algorithm that compares adjacent elements in a list or an array and swaps them if they are in the wrong order. This process is repeated until the entire list is sorted. Bubble Sort has a time complexity of O(n^2) and is not considered efficient for large datasets.
 
@@ -37,7 +37,25 @@ sort(li)
 print(li)
 ----
 
-#Selection Sort Algorithm
+
+
+
+**Selection Sort Algorithm**
+
+Selection Sort is a simple sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of the list and swapping it with the first element of the unsorted part. This process is repeated until the entire list is sorted. Selection Sort has a time complexity of O(n^2) and is not considered efficient for large datasets.
+
+Here's an example of how the Selection Sort algorithm works:
+
+We start by selecting the first element of the list and assume it to be the minimum element.
+
+We then compare the minimum element with each element in the rest of the list. If we find an element that is smaller than the minimum element, we update the minimum element to be that element.
+
+Once we have found the minimum element in the rest of the list, we swap it with the first element of the unsorted part of the list.
+
+We then repeat this process, selecting the next element of the unsorted part of the list and finding the minimum element in the rest of the list until the entire list is sorted.
+
+Here's an example implementation of Selection Sort in Python:
+
 [source,python]
 ----
 def selection_sort(arr):
@@ -60,7 +78,22 @@ print(arr)
 
 
 
-#Insertion sort
+**Insertion sort**
+
+Insertion Sort is a simple sorting algorithm that works by iterating through the list and inserting each element into its correct position in a sorted sublist. We start with an initially empty sorted sublist and insert each element into its correct position by comparing it to the elements in the sorted sublist and shifting any larger elements to the right. This process is repeated until the entire list is sorted. Insertion Sort has a time complexity of O(n^2) and is not considered efficient for large datasets.
+
+Here's an example of how the Insertion Sort algorithm works:
+
+We start by assuming that the first element of the list is already sorted.
+
+We then iterate through the rest of the list, one element at a time, and compare each element to the elements in the sorted sublist.
+
+If we find an element that is smaller than the last element in the sorted sublist, we shift all larger elements to the right by one position and insert the new element into its correct position.
+
+We repeat this process, adding each new element to its correct position in the sorted sublist, until the entire list is sorted.
+
+Here's an example implementation of Insertion Sort in Python:
+
 [source,python]
 ----
 def insertionSort(A):
@@ -77,7 +110,25 @@ print(A)
 ----
 
 
-#Quick Sort
+
+
+**Quick Sort**
+
+Quick Sort is a popular sorting algorithm that uses a divide-and-conquer approach to sort a list or array of elements. It works by selecting a pivot element from the list, partitioning the list into two sub-lists based on whether each element is less than or greater than the pivot, and then recursively sorting each sub-list.
+
+The basic steps of the Quick Sort algorithm are:
+
+Choose a pivot element from the list. This element is often chosen as the last element in the list, but it could be any other element.
+
+Partition the list into two sub-lists based on whether each element is less than or greater than the pivot element.
+
+Recursively sort each sub-list by repeating steps 1 and 2 until the sub-lists are small enough to be sorted efficiently by another algorithm (e.g. insertion sort).
+
+Combine the sorted sub-lists to produce the final sorted list.
+
+Quick Sort has an average time complexity of O(n log n) and is often considered one of the most efficient sorting algorithms. However, its worst-case time complexity is O(n^2), which can occur when the pivot element is chosen poorly.
+
+Here's an example implementation of the Quick Sort algorithm in Python:
 
 [source,python]
 ----
