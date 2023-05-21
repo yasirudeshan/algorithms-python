@@ -165,4 +165,35 @@ quickSort(A, 0, len(A) - 1)
 print(A)
 
 ----
+
+
+**Naive String Matcher Algorithm**
+
+The Naive String Matcher algorithm is a simple pattern matching algorithm that searches for occurrences of a pattern string within a longer text string. It follows a straightforward approach by comparing the pattern with each possible substring of the same length in the text. 
+
+The algorithm iterates through the text, comparing the characters of the pattern with the corresponding characters in each substring. If a match is found, it considers the substring as a potential occurrence of the pattern and reports its starting position. The algorithm continues this process until it has examined all possible substrings.
+
+The Naive String Matcher algorithm has a time complexity of O((n - m + 1) * m), where n is the length of the text and m is the length of the pattern. It is called "naive" because it does not utilize any advanced data structures or techniques to optimize the matching process. While simple to understand and implement, this algorithm may become inefficient for large text and pattern sizes, making it less suitable for practical applications compared to more advanced algorithms like the Knuth-Morris-Pratt or Boyer-Moore algorithms.
+
+
+[source,python]
+----
+
+def naiveStringMatcher(T, P):
+    n = len(T)
+    m = len(P)
+
+    for s in range(n - m + 1):
+        if P[0:m] == T[s : s + m]:
+            print("Pattern Found with shift", s)
+           
+        
+
+
+T = "thequickbrownfoxjumpsoverthelazydog"
+P = "over"
+
+naiveStringMatcher(T, P)
+
+----
    
