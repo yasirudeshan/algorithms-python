@@ -196,4 +196,55 @@ P = "over"
 naiveStringMatcher(T, P)
 
 ----
+
+
+
+**Binary Search
+
+Binary search is an efficient search algorithm used to find the position of a target value within a sorted array. It works by repeatedly dividing the search space in half until the target value is found or determined to be absent.
+
+The algorithm starts by comparing the target value with the middle element of the array. If they match, the search is successful and the position is returned. If the target value is less than the middle element, the search continues on the left half of the array, ignoring the right half. Similarly, if the target value is greater, the search proceeds on the right half, ignoring the left. This process of dividing the search space in half is repeated until the target value is found or the search space becomes empty.
+
+Binary search is efficient because it eliminates half of the remaining search space in each iteration. As a result, it has a time complexity of O(log n), where n is the number of elements in the array. This makes it much faster than linear search, which has a time complexity of O(n).
+
+However, binary search requires the array to be sorted in ascending order. If the array is not sorted, a sorting step must be performed first. Additionally, binary search is most effective for large arrays where the overhead of sorting and initial setup is outweighed by the efficiency of the search process.
    
+   
+[source,python]
+----
+   
+def binarySearch(A, n):
+    l = 0;
+    u = len(A) -1
+    
+
+    while l <= u:
+        m = (l+u) // 2
+        
+        if A[m] == n:
+            globals() ['pos'] = m
+            return True
+
+        else:
+            if n > A[m]:
+                l = m + 1
+            else:
+                u = m - 1
+
+    return False
+        
+
+    
+A = [34,45,55,75,89,97,104,136,145,187] 
+n = 55
+
+if binarySearch(A, n):
+    print("Found in position" , pos)
+else:
+    print("not found")
+    
+    
+----
+
+
+
